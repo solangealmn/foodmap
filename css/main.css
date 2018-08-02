@@ -1,1 +1,63 @@
 /*Add your CSS*/
+.screen-splash,
+.screen-main {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2B2B2B;
+}
+.lg-foodmap{
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  font-weight: lighter;
+  font-size: 3rem;
+}
+.text-lg-foodmap{
+  color: #CE823E;
+}
+.border-foodmap{
+  border:1px solid #CE823E;
+}
+.screen-main{
+  display: none;
+}
+/* Set the size of the div element that contains the map */
+#map {
+ height: 180px;  /* The height is 400 pixels */
+ width: 100%;  /* The width is the width of the web page */
+}
+.form-control-foodmap {
+    color: #2B2B2B;
+    background-color: #fff;
+    border:1px solid #CE823E;
+}
+.form-control-foodmap::-webkit-input-placeholder {
+   color: #CE823E;
+}
+
+.form-control-foodmap:-moz-placeholder { /* Firefox 18- */
+   color: #CE823E;
+}
+
+.form-control-foodmap::-moz-placeholder {  /* Firefox 19+ */
+   color: #CE823E;
+}
+
+.form-control-foodmap:-ms-input-placeholder {
+   color: #CE823E;
+}
+.input-group.md-form.form-sm.form-1 input{
+    border: 1px solid #fff;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.input-group-text{
+  background-color: #CE823E;
+  border:1px solid #CE823E;
+}
