@@ -44,6 +44,13 @@ function initMap() {
       title: restaurantes[i].name,
       map: map
     });
+    var infowindow = new google.maps.InfoWindow(), marker;
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+          return function() {
+              infowindow.setContent(marker.title);
+              infowindow.open(map, marker);
+          }
+      })(marker))
   }
 
   // Try HTML5 geolocation.
