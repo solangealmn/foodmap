@@ -1,4 +1,8 @@
 /*Add your CSS*/
+html{
+  height: 100%;
+  background: #2B2B2B;
+}
 .screen-splash,
 .screen-main {
   position: absolute;
@@ -60,4 +64,16 @@
 .input-group-text{
   background-color: #CE823E;
   border:1px solid #CE823E;
+}
+#food-thumbs{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-foodmap{
+  width: 50%;
+  list-style: none;
+}
+.item-foodmap img{
+  width: 100%;
 }

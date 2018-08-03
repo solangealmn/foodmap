@@ -33,7 +33,7 @@ const restaurantes = [
   },
   {
     "name": "Cantina do Piero il Vero",
-    "image": "./assets/cantina.png",
+    "image": "assets/cantina.png",
     "latitude": -23.5587677,
     "longitude": -46.66278650000004,
     "description": "A traditionally decorated Italian restaurant with checkered tablecloths & sports teams' flags.",
@@ -42,17 +42,17 @@ const restaurantes = [
   {
     "name": "Pop Vegan Food",
     "image": "assets/pop.png",
-    "latitude": -23.5539487,
-    "longitude": -46.65767779999999,
+    "latitude": -23.553912,
+    "longitude": -46.657678,
     "description": "Restaurante vegano em São Paulo, na região da Augusta. Comida boa com preço justo e pizzas irresistíveis. Democratizando a alimentação vegana.",
     "type": "vegana"
   },
   {
     "name": "Loving Hut Jardins",
     "image": "assets/loving.jpg",
-    "latitude": -23.5539487,
-    "longitude": -46.65767779999999,
-    "description": "Outpost of a vegan counter-serve chain with Asian-accented  menus that vary by location.",
+    "latitude": -23.559535,
+    "longitude": -46.661807,
+    "description": "Outpost of a vegan counter-serve chain with Asian-accented menus that vary by location.",
     "type": "vegana"
   },
   {
@@ -60,7 +60,7 @@ const restaurantes = [
     "image": "assets/aji-to.jpg",
     "latitude": -23.5560888,
     "longitude": -46.657931700000006,
-    "description": "Refined restaurant with artistic Japanese décor, serving  temaki & other delicacies.",
+    "description": "Refined restaurant with artistic Japanese décor, serving temaki & other delicacies.",
     "type": "japonesa"
   },
   {
@@ -68,7 +68,7 @@ const restaurantes = [
     "image": "assets/sushimasa.png",
     "latitude": -23.5600095,
     "longitude": -46.66369069999996,
-    "description": "This modern spot offers Japanese fare, with a variety of  fish, a buffet & all-you-can-eat options.",
+    "description": "This modern spot offers Japanese fare, with a variety of fish, a buffet & all-you-can-eat options.",
     "type": "japonesa"
   }
 ];
