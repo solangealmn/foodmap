@@ -33,9 +33,18 @@ var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 15
+    zoom: 10
   });
   infoWindow = new google.maps.InfoWindow;
+
+  // Iserir localização de todos os restuarantes
+  for (var i = 0; i < restaurantes.length; i++) {
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(restaurantes[i].latitude, restaurantes[i].longitude),
+      title: restaurantes[i].name,
+      map: map
+    });
+  }
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
@@ -55,14 +64,6 @@ function initMap() {
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
-  }
-  // Iserir localização de todos os restuarantes
-  for (var i = 0; i < restaurantes.length; i++) {
-    var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(restaurantes[i].latitude, restaurantes[i].longitude),
-      title: restaurantes[i].name,
-      map: map
-    });
   }
 
 }
