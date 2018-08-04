@@ -1,7 +1,7 @@
-/*Add your CSS*/
+c0392b/*Add your CSS*/
 html{
   height: 100%;
-  background: #2B2B2B;
+  background: #fff;
 }
 .screen-splash,
 .screen-main {
@@ -10,7 +10,7 @@ html{
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2B2B2B;
+  background: #fff;
 }
 .lg-foodmap{
   display: none;
@@ -19,14 +19,12 @@ html{
   width: 100%;
   height: auto;
   z-index: 1;
-  font-weight: lighter;
-  font-size: 3rem;
 }
-.text-lg-foodmap{
-  color: #CE823E;
+.bg-foodmap{
+  background-color: #c0392b;
 }
 .border-foodmap{
-  border:1px solid #CE823E;
+  border:1px solid #c0392b;
 }
 .screen-main{
   display: none;
@@ -39,22 +37,22 @@ html{
 .form-control-foodmap {
     color: #2B2B2B;
     background-color: #fff;
-    border:1px solid #CE823E;
+    border:1px solid #c0392b;
 }
 .form-control-foodmap::-webkit-input-placeholder {
-   color: #CE823E;
+   color: #c0392b;
 }
 
 .form-control-foodmap:-moz-placeholder { /* Firefox 18- */
-   color: #CE823E;
+   color: #c0392b;
 }
 
 .form-control-foodmap::-moz-placeholder {  /* Firefox 19+ */
-   color: #CE823E;
+   color: #c0392b;
 }
 
 .form-control-foodmap:-ms-input-placeholder {
-   color: #CE823E;
+   color: #c0392b;
 }
 .input-group.md-form.form-sm.form-1 input{
     border: 1px solid #fff;
@@ -62,18 +60,21 @@ html{
     border-bottom-right-radius: 0.25rem;
 }
 .input-group-text{
-  background-color: #CE823E;
-  border:1px solid #CE823E;
+  background-color: #c0392b;
+  border:1px solid #e25020;
 }
 #food-thumbs{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-.item-foodmap{
+#food-thumbs li, .item-foodmap{
   width: 50%;
+  padding: 5px;
   list-style: none;
 }
-.item-foodmap img{
+#food-thumbs li img, .item-foodmap img{
   width: 100%;
+  height: 150px;
+  object-fit: cover;
 }

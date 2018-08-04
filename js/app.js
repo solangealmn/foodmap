@@ -4,7 +4,7 @@ var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 10
+    zoom: 16
   });
   infoWindow = new google.maps.InfoWindow;
 
@@ -52,46 +52,46 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: O serviço de Geolocalização falhou.' :
     'Error: Seu browser não tem suporte ao serviço de Geolocalização.');
     infoWindow.open(map);
-}
-
-function imageList() {
-  var thumbs = [];
-  for (var i in restaurantes) {
-    var foodThumbs = document.getElementById('food-thumbs');
-    var itemFoodmap = document.createElement('li');
-    itemFoodmap.classList.add('item-foodmap');
-    var img = document.createElement('img');
-    img.src = restaurantes[i].image;
-    itemFoodmap.appendChild(img);
-    foodThumbs.appendChild(itemFoodmap);
   }
-}
-imageList();
 
-//Splash screen
-$(document).ready( ()=> {
-  //Efeito da tela inicial
-  $('.lg-foodmap').delay('1000').fadeToggle('slow', 'linear');
-  $('.screen-main').delay('5000').fadeIn('slow');
-  $('.lg-foodmap').delay('3000').fadeOut('slow');
-
-  //Filtro de restaurantes
-  $('.search').click(()=> {
-    var inputValue = $('.search-item').val();
-    console.log(inputValue);
-
-    $('.item-foodmap').each(()=> {
-      if($(this).text() !== inputValue) {
-        $(this).fadeOut('slow');
-      }
-    })
-  })
-
-  $('.search-item').on('input', function () {
-    if($(this).val() === "") {
-      $('.item-foodmap').each( function() {
-        $(this).fadeIn('slow')
-      });
+  function imageList() {
+    for (var i in restaurantes) {
+      var foodThumbs = document.getElementById('food-thumbs');
+      var itemList = document.createElement('li');
+      var img = document.createElement('img');
+      img.src = restaurantes[i].image;
+      itemList.appendChild(img);
+      foodThumbs.appendChild(itemList);
     }
-  })
-});
+  }
+  imageList();
+
+  function imgFiltered(images) {
+    $( '#food-thumbs' ).html('');
+    images.map(function(images) {
+      var foodThumbs = document.getElementById('food-thumbs');
+      var itemFoodmap = document.createElement('li');
+      itemFoodmap.classList.add('item-foodmap');
+      var img = document.createElement('img');
+      img.src = images.image;
+      itemFoodmap.appendChild(img);
+      foodThumbs.appendChild(itemFoodmap);
+    });
+  }
+
+  //Splash screen
+  $(document).ready( ()=> {
+    //Efeito da tela inicial
+    $('.lg-foodmap').delay('1000').fadeToggle('slow', 'linear');
+    $('.screen-main').delay('5000').fadeIn('slow');
+    $('.lg-foodmap').delay('3000').fadeOut('slow');
+
+    //Filtro de restaurantes
+    $('#search').click(()=> {
+      var itemValue = $('.search-item').val();
+      var eateryFiltered = restaurantes.filter(eatery => itemValue === eatery.name || itemValue === eatery.type);
+      //console.log(eateryFiltered);
+      imgFiltered(eateryFiltered);
+    });
+
+  });
