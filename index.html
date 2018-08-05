@@ -42,323 +42,46 @@
           <div class="input-group md-form form-sm form-2 pl-0">
               <input class="form-control form-control-foodmap my-0 py-1 border-foodmap search-item" type="text" placeholder="Filtrar pelo tipo de comida" aria-label="Search">
               <div class="input-group-append">
-                  <button class="input-group-text" id="search"><i class="fa fa-search text-white" aria-hidden="true"></i></button
+                <button class="input-group-text" id="search"><i class="fa fa-search text-white" aria-hidden="true"></i></button>
               </div>
           </div>
         </div>
       </div>
-      <div class="row ml-0 mt-2">
+      <div class="row m-2">
         <div class="col-12 p-0">
-          <ul id="food-thumbs" class="pt-3 pl-0 pr-0">
+          <ul id="food-thumbs" class="d-flex flex-wrap pt-3 pl-0 pr-0">
             <!-- função imageList criada dinamicamente no app.js -->
           </ul>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Modal Panel 0 -->
-  <div class="modal fade" id="panel-0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <!-- Modal open-modal-->
+  <div class="modal fade" id="open-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-notify modal-danger" role="document">
       <!--Content-->
       <div class="modal-content">
           <!--Header-->
-          <div class="modal-header">
+          <div class="modal-header border-0">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true" class="white-text">&times;</span>
               </button>
           </div>
 
           <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <p>Latife</p>
-                  <img src="assets\latife.png" alt="">
-              </div>
+          <div class="modal-body text-center">
+              <!-- Conteúdo montado dinamicamente -->
           </div>
 
           <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+          <div class="modal-footer justify-content-center border-0">
+              <a type="button" class="btn  ">Faça seu pedido! <i class="fas fa-utensils ml-1"></i></a>
           </div>
       </div>
       <!--/.Content-->
   </div>
   </div>
-  <!-- Modal Panel 0 -->
-
-  <!-- Modal Panel 1 -->
-  <div class="modal fade" id="panel-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-              <p class="heading lead">Modal Danger</p>
-
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-          </div>
-
-          <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                      ab officiis totam.</p>
-              </div>
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-          </div>
-      </div>
-      <!--/.Content-->
-  </div>
-  </div>
-  <!-- Modal Panel 1 -->
-
-  <!-- Modal Panel 2 -->
-  <div class="modal fade" id="panel-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-              <p class="heading lead">Modal Danger</p>
-
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-          </div>
-
-          <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                      ab officiis totam.</p>
-              </div>
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-          </div>
-      </div>
-      <!--/.Content-->
-  </div>
-  </div>
-  <!-- Modal Panel 2 -->
-
-  <!-- Modal Panel 3 -->
-  <div class="modal fade" id="panel-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-              <p class="heading lead">Modal Danger</p>
-
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-          </div>
-
-          <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                      ab officiis totam.</p>
-              </div>
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-          </div>
-      </div>
-      <!--/.Content-->
-  </div>
-  </div>
-  <!-- Modal Panel 3 -->
-
-  <!-- Modal Panel 4 -->
-  <div class="modal fade" id="panel-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-              <p class="heading lead">Modal Danger</p>
-
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-          </div>
-
-          <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                      ab officiis totam.</p>
-              </div>
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-          </div>
-      </div>
-      <!--/.Content-->
-  </div>
-  </div>
-  <!-- Modal Panel 4 -->
-
-  <!-- Modal Panel 5 -->
-  <div class="modal fade" id="panel-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-              <p class="heading lead">Modal Danger</p>
-
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-          </div>
-
-          <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                      ab officiis totam.</p>
-              </div>
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-          </div>
-      </div>
-      <!--/.Content-->
-  </div>
-  </div>
-  <!-- Modal Panel 5 -->
-
-  <!-- Modal Panel 6 -->
-  <div class="modal fade" id="panel-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-              <p class="heading lead">Modal Danger</p>
-
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-          </div>
-
-          <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                      ab officiis totam.</p>
-              </div>
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-          </div>
-      </div>
-      <!--/.Content-->
-  </div>
-  </div>
-  <!-- Modal Panel 6 -->
-
-  <!-- Modal Panel 7 -->
-  <div class="modal fade" id="panel-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-              <p class="heading lead">Modal Danger</p>
-
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-          </div>
-
-          <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                      ab officiis totam.</p>
-              </div>
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-          </div>
-      </div>
-      <!--/.Content-->
-  </div>
-  </div>
-  <!-- Modal Panel 7 -->
-
-  <!-- Modal Panel 8 -->
-  <div class="modal fade" id="panel-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-danger" role="document">
-      <!--Content-->
-      <div class="modal-content">
-          <!--Header-->
-          <div class="modal-header">
-              <p class="heading lead">Modal Danger</p>
-
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-          </div>
-
-          <!--Body-->
-          <div class="modal-body">
-              <div class="text-center">
-                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
-                      ab officiis totam.</p>
-              </div>
-          </div>
-
-          <!--Footer-->
-          <div class="modal-footer justify-content-center">
-              <a type="button" class="btn btn-danger">Get it now <i class="fa fa-diamond ml-1"></i></a>
-              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
-          </div>
-      </div>
-      <!--/.Content-->
-  </div>
-  </div>
-  <!-- Modal Panel 8 -->
+  <!-- Modal open-modal -->
 
   <script src="js/data.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>

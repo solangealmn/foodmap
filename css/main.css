@@ -68,8 +68,6 @@ html{
 }
 #food-thumbs{
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
 }
 #food-thumbs li, .item-foodmap{
   width: 50%;
@@ -89,4 +87,7 @@ html{
   width: 100%;
   height: 150px;
   object-fit: cover;
+}
+.change-content img{
+  width: 100%;
 }
