@@ -88,6 +88,6 @@ html{
   height: 150px;
   object-fit: cover;
 }
-.change-content img{
+.modal-body img{
   width: 100%;
 }
