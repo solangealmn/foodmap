@@ -57,7 +57,9 @@ $(document).ready( ()=> {
   //Monta a lista de imagens
   function imageList() {
     for (var eatery of restaurantes) {
-      $("#food-thumbs").append('<li class="item-foodmap" data-toggle="modal" data-target="#open-modal"><p>' + eatery.name + '</p><img src="' + eatery.image +'" alt="' + eatery.name + '"></li>');
+      $("#food-thumbs").append('<li class="item-foodmap" data-toggle="modal" data-target="#open-modal"><p>' + eatery.name + '</p><img src="' + eatery.image + '" alt="' + eatery.name + '"></li>');
+      //console.log(eatery.name);
+      //console.log(eatery.image);
     }
   }
   imageList();
@@ -68,16 +70,20 @@ $(document).ready( ()=> {
     //console.log(eateryFiltered);
     imgFiltered(eateryFiltered);
   })
-  function imgFiltered(images) {
-    $('#food-thumbs').html('');
-    images.map((images)=> {
-      $("#food-thumbs").append('<li class="item-foodmap" data-toggle="modal" data-target="#open-modal"><p>' + images.name + '</p><img src="' + images.image +'" alt="' + images.name + '"></li>');
+  function imgFiltered(eatery) {
+    eatery.map((eatery)=> {
+      $("#food-thumbs").append('<li class="item-foodmap" data-toggle="modal" data-target="#open-modal"><p>' + eatery.name + '</p><img src="' + eatery.image +'" alt="' + eatery.name + '"></li>');
+      console.log(eatery.name);
+      console.log(eatery.image);
     });
   }
   //Conteúdo dinamico do modal
-    $(".itemFoodmap").click( ()=> {
-      $.each(restaurantes, (index, value) => {
-        $('.modal-body').html('<h3 class="bg-foodmap text-white p-3 m-0">' + restaurantes.name + '</h3><img src="' + restaurantes.image + '" alt="' + restaurantes.image + '"><p class="p-3 m-0">' + restaurantes.description + '</p>');
-      });
+    $('.itemFoodmap').click( ()=> {
+      for( var i = 0; i < restaurantes.length; i++) {
+        $('.modal-body').html('<h3 class="bg-foodmap text-white p-3 m-0">' + restaurantes[i].name + '</h3><img src="' + restaurantes[i].image + '" alt="' + restaurantes[i].image + '"><p class="p-3 m-0">' + restaurantes[i].description + '</p>');
+        console.log(restaurantes[i].name);
+        console.log(restaurantes[i].image);
+        console.log(restaurantes[i].description);
+      }
     });
 });
