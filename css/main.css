@@ -23,6 +23,9 @@ html{
 .bg-foodmap{
   background-color: #c0392b;
 }
+.text-foodmap{
+  color: #c0392b;
+}
 .border-foodmap{
   border:1px solid #c0392b;
 }
@@ -37,7 +40,7 @@ html{
 .form-control-foodmap {
     color: #2B2B2B;
     background-color: #fff;
-    border:1px solid #c0392b;
+    border: 1px solid #c0392b;
 }
 .form-control-foodmap::-webkit-input-placeholder {
    color: #c0392b;
@@ -70,8 +73,17 @@ html{
 }
 #food-thumbs li, .item-foodmap{
   width: 50%;
-  padding: 5px;
+  margin: 0 0 10px 0;
+  padding: 0 10px 0 0;
   list-style: none;
+  text-align: center;
+}
+#food-thumbs li p, .item-foodmap p{
+  background-color: #c0392b;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 0.8rem;
+  margin: 0;
 }
 #food-thumbs li img, .item-foodmap img{
   width: 100%;

@@ -54,28 +54,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
   }
 
-  function imageList() {
-    for (var i in restaurantes) {
-      var foodThumbs = document.getElementById('food-thumbs');
-      var itemList = document.createElement('li');
-      var img = document.createElement('img');
-      img.src = restaurantes[i].image;
-      itemList.appendChild(img);
-      foodThumbs.appendChild(itemList);
-    }
-  }
-  imageList();
-
   function imgFiltered(images) {
     $( '#food-thumbs' ).html('');
     images.map(function(images) {
-      var foodThumbs = document.getElementById('food-thumbs');
-      var itemFoodmap = document.createElement('li');
-      itemFoodmap.classList.add('item-foodmap');
-      var img = document.createElement('img');
-      img.src = images.image;
-      itemFoodmap.appendChild(img);
-      foodThumbs.appendChild(itemFoodmap);
+      $("#food-thumbs").append('<li class="open-modal"><p>' + images.name +'</p><img src="' + images.image + '"></li>');
     });
   }
 
@@ -86,6 +68,14 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     $('.screen-main').delay('5000').fadeIn('slow');
     $('.lg-foodmap').delay('3000').fadeOut('slow');
 
+    //Monta a lista de imagens
+    function imageList() {
+      for (var i = 0; i < restaurantes.length; i++) {
+        $("#food-thumbs").append('<li class="open-modal"><p>' + restaurantes[i].name +'</p><img src="'+restaurantes[i].image + '"></li>');
+      }
+    }
+    imageList();
+    $
     //Filtro de restaurantes
     $('#search').click(()=> {
       var itemValue = $('.search-item').val();
