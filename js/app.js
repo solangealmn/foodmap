@@ -57,6 +57,9 @@ $(document).ready( ()=> {
   function imageList() {
     $.each(restaurantes, (index, value) => {
       $("#food-thumbs").append('<li class="item-foodmap" data-toggle="modal" data-target="#open-modal"><p>' + restaurantes[index].name + '</p><img id="image' + index + '" src="' + restaurantes[index].image +'" alt="' + restaurantes[index].name + '"></li>');
+      $("#image"+ index).click( ()=> {
+        $('.modal-body').html('<h3 class="bg-foodmap text-white p-3 m-0">' + restaurantes[index].name + '</h3><img src="' + restaurantes[index].image + '" alt="' + restaurantes[index].image + '"><p class="p-3 m-0">' + restaurantes[index].description + '</p>');
+      });
     });
   }
   imageList();
@@ -69,14 +72,18 @@ $(document).ready( ()=> {
   })
   function imgFiltered(images) {
     $('#food-thumbs').html('');
-    images.map((images)=> {
-      $("#food-thumbs").append('<li class="item-foodmap" data-toggle="modal" data-target="#open-modal"><p>' + images.name + '</p><img src="' + images.image +'" alt="' + images.name + '"></li>');
+    images.map((images, index)=> {
+      $("#food-thumbs").append('<li class="item-foodmap" data-toggle="modal" data-target="#open-modal"><p>' + images.name + '</p><img id="image' + index + '" src="' + images.image +'" alt="' + images.name + '"></li>');
+      //Conteúdo dinamico do modal
+      $("#image"+ index).click( ()=> {
+        $('.modal-body').html('<h3 class="bg-foodmap text-white p-3 m-0">' + images.name + '</h3><img id="image' + index + '" src="' + images.image + '" alt="' + images.image + '"><p class="p-3 m-0">' + images.description + '</p>');
+      });
     });
   }
   //Conteúdo dinamico do modal
   $.each(restaurantes, (index, value) => {
     $("#image"+ index).click( ()=> {
-      $('.modal-body').html('<h3 class="bg-foodmap text-white p-3 m-0">' + restaurantes[index].name + '</h3><img src="' + restaurantes[index].image + '" alt="' + restaurantes[index].image + '"><p class="p-3 m-0">' + restaurantes[index].description + '</p>');
+      $('.modal-body').html('<h3 class="bg-foodmap text-white p-3 m-0">' + restaurantes[index].name + '</h3><img id="image' + index + '" src="' + restaurantes[index].image + '" alt="' + restaurantes[index].image + '"><p class="p-3 m-0">' + restaurantes[index].description + '</p>');
     });
   });
 });
